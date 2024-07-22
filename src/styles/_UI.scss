@@ -1,0 +1,355 @@
+// MAIN UI
+.ui-inner {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: $ui-sidebar-width;
+}
+
+.left {
+  left: $g1;
+}
+
+.right {
+  right: $g1;
+}
+
+.ui-lottie-wrapper {
+  display: flex;
+}
+
+.ui-item {
+  @include flex_centre;
+}
+
+.ui-lottie-container {
+  width: $ui-lottie-size;
+  height: $ui-lottie-size;
+  cursor: pointer;
+}
+
+.pathways-lottie {
+  width: $ui-sidebar-width;
+  height: $ui-sidebar-width;
+}
+
+.pathways-text-wrapper {
+  position: absolute;
+  z-index: 3;
+  cursor: pointer;
+  width: $ui-sidebar-width;
+  height: $ui-sidebar-width;
+  @include flex_centre;
+  text-align: center;
+  p {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+  }
+}
+
+.pathways-pulse-wrapper {
+  position: absolute;
+  width: $ui-sidebar-width;
+  height: $ui-sidebar-width;
+  @include flex_centre;
+  z-index: 2;
+}
+
+.pathways-pulse-lottie {
+  position: absolute;
+  width: $ui-sidebar-width + 20;
+  height: $ui-sidebar-width + 20;
+}
+
+// TOOL TIPS
+.tooltip-wrapper {
+  position: absolute;
+}
+
+.tooltip-container {
+  position: relative;
+  height: $ui-lottie-size;
+  width: $ui-lottie-size;
+  @include flex_centre;
+  justify-content: flex-start;
+  z-index: 3;
+}
+
+.ui-item:hover .tooltip-container {
+  display: flex;
+}
+
+.tooltip {
+  padding: 0.5rem 1rem;
+  cursor: default;
+  p {
+    color: white;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}
+
+// BUTTONS
+.primary-cta {
+  display: flex;
+  gap: 0.75rem;
+  background-color: #ffc85d;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+}
+
+.close-lottie {
+  width: $ui-lottie-size;
+  height: $ui-lottie-size;
+}
+
+// ICONS
+.social-share-wrapper {
+  justify-content: center;
+}
+.social-share-item {
+  @include flex_centre;
+  flex-direction: column;
+  p {
+    text-transform: capitalize;
+  }
+}
+
+.share-tooltip-wrapper {
+  position: static;
+}
+
+.share-tooltip {
+  position: static;
+  height: auto;
+  width: auto;
+  p {
+    margin-bottom: 0 !important;
+  }
+  transform: translateX(10%);
+}
+
+.social-share-icon {
+  background-color: $subtle-grey;
+  padding: 1rem;
+  border-radius: 100%;
+  width: 56px;
+  height: 56px;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// Download CTA
+.download-cta {
+  // width: 10rem;
+  margin-top: 1rem;
+}
+
+// HAMBURGER / MOBILE MENU
+.mobile-menu-outer {
+  width: 100%;
+}
+.hamburger-menu-wrapper {
+  @include flex_centre;
+  position: absolute;
+  right: calc((100vw - 530px) / 2);
+  top: 2rem;
+  z-index: 3;
+}
+
+.hamburger-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.mobile-menu-wrapper {
+  height: 100%;
+  width: 100%;
+  @include flex_centre;
+}
+
+.mobile-menu-inner {
+  width: 70vw;
+}
+
+.mobile-item {
+  border-right: none !important;
+  padding-right: 0 !important;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid $subtle-grey;
+  width: 100%;
+  justify-content: center;
+  p {
+    margin-bottom: 0 !important;
+    color: $dark-grey;
+    opacity: 0.9;
+    font-weight: 800;
+  }
+}
+
+.last-mobile-item {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+// FORM / INPUTS
+.copy-link-wrapper {
+  background-color: $subtle-grey;
+  color: $dark-grey;
+  opacity: 0.8;
+  padding: 1.125rem 0.75rem;
+  gap: 1rem;
+  justify-content: space-around;
+  width: 102%;
+}
+
+// SVG hovers
+.copy-link-wrapper:hover #content_copy {
+  fill: $dark-grey;
+  transition: fill 0.2s;
+}
+
+#content_copy {
+  fill: $grey;
+  transition: fill 0.2s;
+}
+
+.copy-link-wrapper:hover p {
+  font-weight: 500;
+}
+
+#fb-icon,
+#x-icon,
+#reddit-icon,
+#discord-icon {
+  fill: $black;
+}
+
+.social-share-item:hover #fb-icon,
+.social-share-item:hover #x-icon,
+.social-share-item:hover #reddit-icon,
+.social-share-item:hover #discord-icon {
+  fill: $subtle-grey;
+}
+
+.social-share-item:hover .social-share-icon {
+  background-color: $dark-grey;
+  transition: fill 0.4s;
+}
+
+.social-share-item:hover p {
+  text-decoration: underline;
+  transition: fill 0.4s;
+}
+
+// MODALS
+.close-btn {
+  width: 100%;
+  height: $g1 * 2.5;
+  max-height: 10rem;
+  padding-top: $g1 / 3;
+  @include flex_centre;
+}
+
+.small-close-btn {
+  height: 6rem;
+  padding-top: 1rem;
+}
+
+// TOP BORDER
+.top-border-wrapper {
+  position: absolute;
+  top: 0;
+  height: 38px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.top-border-inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+// FOOTER
+.footer-outer-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 5%;
+}
+
+.footer-wrapper {
+  gap: 1rem;
+  position: relative;
+  color: $mid-grey;
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+.footer-item {
+  padding-right: 1rem;
+  border-right: 1.5px solid $mid-grey;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  p {
+    line-height: 70%;
+    letter-spacing: 1.2px;
+  }
+}
+
+.last {
+  border-right: none;
+}
+
+.hero-footer {
+  position: fixed;
+  bottom: 5%;
+  width: 100%;
+  @include flex_centre;
+  div {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+
+.link-footer svg {
+  height: 10.5px;
+}
+
+.link-download-svg {
+  stroke: #727272;
+}
+
+@keyframes fadeOpacity {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.fade-text {
+  animation: fadeOpacity 2s infinite ease-in-out;
+}

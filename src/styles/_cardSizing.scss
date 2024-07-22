@@ -1,0 +1,88 @@
+$card-height: 530px;
+
+.card-wrapper,
+.lottie-container {
+  height: $card-height;
+  aspect-ratio: 1 / 1;
+  overflow-y: hidden;
+}
+.card-border {
+  min-height: 42px;
+}
+.title-wrapper {
+  min-height: 180px;
+}
+.bottom-half {
+  height: 100%;
+}
+
+@media (max-width: 623px) {
+  $card-height: 480px;
+
+  .card-wrapper,
+  .lottie-container {
+    height: $card-height;
+  }
+  .card-border {
+    min-height: 40px;
+  }
+  .title-wrapper {
+    min-height: 150px;
+  }
+}
+
+// //shrink card
+@media (max-width: 519px) {
+  $card-height: 400px;
+
+  .card-wrapper,
+  .lottie-container {
+    height: $card-height;
+  }
+  .card-border {
+    min-height: 28px;
+  }
+  .title-wrapper {
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 419px) {
+  .card-wrapper,
+  .lottie-container {
+    height: auto;
+    width: 94vw;
+  }
+  .card-border {
+    min-height: 12px;
+  }
+  .title-wrapper {
+    min-height: 110px;
+  }
+  .card-category p,
+  .card-id p {
+    font-size: 10px !important;
+  }
+  .card-id {
+    width: 14px;
+    height: 14px;
+  }
+  h3 {
+    font-size: 1.5rem !important;
+    letter-spacing: 0.312px !important;
+    line-height: 130% !important;
+  }
+  .question-text {
+    font-size: 12px !important;
+    p {
+      font-size: 12px !important;
+    }
+  }
+
+  .additional-text p {
+    font-size: 10px !important;
+    p {
+      font-size: 10px !important;
+    }
+  }
+}

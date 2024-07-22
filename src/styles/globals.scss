@@ -1,0 +1,93 @@
+@import "./variables", "./mixins", "./UI", "./preloader", "./modals", "./cards",
+  "./comments", "./dynamicStyles", "./reusableClasses", "./mediaQueries", "./cardSizing";
+
+// CSS RESET
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+// GLOBAL ELEMENTS
+html {
+  color: $black;
+  overflow-x: hidden !important;
+}
+
+main {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $kefa;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  letter-spacing: 0.512px;
+  line-height: 150%;
+}
+
+p {
+  line-height: 140%;
+  letter-spacing: 0.16px;
+}
+
+// ios browser style blocker
+.pointer,
+.ui-lottie-container,
+.ui-lottie-wrapper,
+button,
+a {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pointer:focus,
+.ui-lottie-container,
+.ui-lottie-wrapper,
+button:focus,
+a:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+// CUSTOM SCROLLBAR
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+  // width: 5px;
+  width: 0;
+}
+
+/* Track of the scrollbar */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: $light-grey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $grey;
+}
